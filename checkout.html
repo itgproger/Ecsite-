@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Checkout — Furniro</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="pages.css" />
+    <script src="inner.js" defer></script>
+  </head>
+  <body class="inner-page">
+    <div class="page-header"></div>
+    <main>
+      <section class="page-hero">
+        <div>
+          <svg class="brand-mark" viewBox="0 0 48 36">
+            <path d="M4 30 16 5l8 17L32 5l12 25h-8l-4-9-8 14-8-14-4 9H4Z" />
+          </svg>
+          <h1>Checkout</h1>
+          <div class="breadcrumbs">
+            <a href="index.html">Home</a><span>›</span><span>Checkout</span>
+          </div>
+        </div>
+      </section>
+      <form class="checkout-layout page-container" id="checkout-form">
+        <div>
+          <h2>Billing details</h2>
+          <div class="form-grid">
+            <div class="field"><label>First Name</label><input required /></div>
+            <div class="field"><label>Last Name</label><input required /></div>
+            <div class="field full">
+              <label>Company Name (Optional)</label><input />
+            </div>
+            <div class="field full">
+              <label>Country / Region</label
+              ><select>
+                <option>Sri Lanka</option>
+                <option>United States</option>
+                <option>United Kingdom</option>
+              </select>
+            </div>
+            <div class="field full">
+              <label>Street address</label><input required />
+            </div>
+            <div class="field full">
+              <label>Town / City</label><input required />
+            </div>
+            <div class="field full">
+              <label>Province</label
+              ><select>
+                <option>Western Province</option>
+                <option>Central Province</option>
+              </select>
+            </div>
+            <div class="field full">
+              <label>ZIP code</label><input required />
+            </div>
+            <div class="field full">
+              <label>Phone</label><input type="tel" required />
+            </div>
+            <div class="field full">
+              <label>Email address</label><input type="email" required />
+            </div>
+            <div class="field full">
+              <textarea placeholder="Additional information"></textarea>
+            </div>
+          </div>
+        </div>
+        <aside class="order-box">
+          <div class="order-head">
+            <span>Product</span><span>Subtotal</span>
+          </div>
+          <div class="order-row muted">
+            <span>Asgaard sofa × 1</span><span>Rs. 250,000.00</span>
+          </div>
+          <div class="order-row">
+            <span>Subtotal</span><span>Rs. 250,000.00</span>
+          </div>
+          <div class="order-row total">
+            <span>Total</span><strong>Rs. 250,000.00</strong>
+          </div>
+          <div class="payment">
+            <label
+              ><input type="radio" name="payment" checked /> Direct Bank
+              Transfer</label
+            >
+            <p>
+              Make your payment directly into our bank account. Please use your
+              Order ID as the payment reference.
+            </p>
+            <label
+              ><input type="radio" name="payment" /> Direct Bank Transfer</label
+            ><label
+              ><input type="radio" name="payment" /> Cash On Delivery</label
+            >
+            <p>
+              Your personal data will be used to process your order and support
+              your experience throughout this website.
+            </p>
+          </div>
+          <button class="place-order">Place order</button>
+        </aside>
+      </form>
+    </main>
+    <section class="features">
+      <div class="feature">
+        <span class="feature-icon" aria-hidden="true">01</span>
+        <div>
+          <h3>High Quality</h3>
+          <p>crafted from top materials</p>
+        </div>
+      </div>
+      <div class="feature">
+        <span class="feature-icon" aria-hidden="true">02</span>
+        <div>
+          <h3>Warranty Protection</h3>
+          <p>Over 2 years</p>
+        </div>
+      </div>
+      <div class="feature">
+        <span class="feature-icon" aria-hidden="true">03</span>
+        <div>
+          <h3>Free Shipping</h3>
+          <p>Order over 150 $</p>
+        </div>
+      </div>
+      <div class="feature">
+        <span class="feature-icon" aria-hidden="true">04</span>
+        <div>
+          <h3>24 / 7 Support</h3>
+          <p>Dedicated support</p>
+        </div>
+      </div>
+    </section>
+    <div class="page-footer"></div>
+    <script>
+      document.addEventListener("DOMContentLoaded", () =>
+        document
+          .querySelector("#checkout-form")
+          .addEventListener("submit", (e) => {
+            e.preventDefault();
+            localStorage.setItem("furniro-cart", "0");
+            showToast("Order successfully placed");
+            setTimeout(() => (location.href = "index.html"), 1400);
+          }),
+      );
+    </script>
+  </body>
+</html>

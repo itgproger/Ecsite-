@@ -1,0 +1,413 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Furniro — beautiful furniture for every room."
+    />
+    <title>Furniro — New Collection</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="Furniro home">
+        <svg class="brand-mark" viewBox="0 0 48 36" aria-hidden="true">
+          <path d="M4 30 16 5l8 17L32 5l12 25h-8l-4-9-8 14-8-14-4 9H4Z" />
+        </svg>
+        <span>Furniro</span>
+      </a>
+
+      <button
+        class="menu-toggle"
+        type="button"
+        aria-label="Open menu"
+        aria-expanded="false"
+      >
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="shop.html">Shop</a>
+        <a href="blog.html">Blog</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+
+      <div class="header-actions">
+        <button type="button" aria-label="Account">
+          <svg viewBox="0 0 24 24">
+            <circle cx="12" cy="8" r="4" />
+            <path d="M4 21c.8-4 3.5-6 8-6s7.2 2 8 6" />
+          </svg>
+        </button>
+        <button class="search-button" type="button" aria-label="Search">
+          <svg viewBox="0 0 24 24">
+            <circle cx="10.5" cy="10.5" r="6.5" />
+            <path d="m16 16 5 5" />
+          </svg>
+        </button>
+        <button type="button" aria-label="Wishlist">
+          <svg viewBox="0 0 24 24">
+            <path
+              d="M20.8 4.8a5.5 5.5 0 0 0-7.8 0L12 5.9l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.4a5.5 5.5 0 0 0 0-7.8Z"
+            />
+          </svg>
+        </button>
+        <button
+          class="cart-button"
+          type="button"
+          aria-label="Cart"
+          onclick="location.href='cart.html'"
+        >
+          <svg viewBox="0 0 24 24">
+            <circle cx="9" cy="20" r="1" />
+            <circle cx="19" cy="20" r="1" />
+            <path
+              d="M3 4h2l2.4 11.2a2 2 0 0 0 2 1.6h8.8a2 2 0 0 0 2-1.6L22 8H6"
+            />
+          </svg>
+          <span class="cart-count" aria-live="polite">0</span>
+        </button>
+      </div>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-label="New collection">
+        <div class="hero-card">
+          <p class="eyebrow">New Arrival</p>
+          <h1>Discover Our<br />New Collection</h1>
+          <p class="hero-copy">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit
+            tellus, luctus nec ullamcorper mattis.
+          </p>
+          <a class="primary-button" href="#products">Buy Now</a>
+        </div>
+      </section>
+
+      <section class="range section" id="about">
+        <div class="section-heading">
+          <h2>Browse The Range</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+        <div class="range-grid">
+          <a class="range-card" href="#products"
+            ><img
+              src="assets/range-dining.png"
+              alt="Bright dining room"
+              loading="lazy"
+            />
+            <h3>Dining</h3></a
+          >
+          <a class="range-card" href="#products"
+            ><img
+              src="assets/range-living.png"
+              alt="Modern living room"
+              loading="lazy"
+            />
+            <h3>Living</h3></a
+          >
+          <a class="range-card" href="#products"
+            ><img
+              src="assets/range-bedroom.png"
+              alt="Calm bedroom"
+              loading="lazy"
+            />
+            <h3>Bedroom</h3></a
+          >
+        </div>
+      </section>
+
+      <section class="products section" id="products">
+        <h2>Our Products</h2>
+        <div class="product-grid">
+          <article class="product-card">
+            <div class="product-image">
+              <img
+                src="assets/product-1.png"
+                alt="Syltherine chair"
+                loading="lazy"
+              /><span class="badge sale">-30%</span>
+            </div>
+            <div class="product-info">
+              <h3>Syltherine</h3>
+              <p>Stylish cafe chair</p>
+              <strong>Rp 2.500.000</strong><del>Rp 3.500.000</del>
+            </div>
+            <div class="product-overlay">
+              <button class="add-cart">Add to cart</button>
+              <div>
+                <button aria-label="Share Syltherine"><span>Share</span></button
+                ><button class="like" aria-label="Like Syltherine">
+                  <span>Like</span>
+                </button>
+              </div>
+            </div>
+          </article>
+          <article class="product-card">
+            <div class="product-image">
+              <img
+                src="assets/product-2.png"
+                alt="Leviosa chair"
+                loading="lazy"
+              />
+            </div>
+            <div class="product-info">
+              <h3>Leviosa</h3>
+              <p>Stylish cafe chair</p>
+              <strong>Rp 2.500.000</strong>
+            </div>
+            <div class="product-overlay">
+              <button class="add-cart">Add to cart</button>
+              <div>
+                <button aria-label="Share Leviosa"><span>Share</span></button
+                ><button class="like" aria-label="Like Leviosa">
+                  <span>Like</span>
+                </button>
+              </div>
+            </div>
+          </article>
+          <article class="product-card">
+            <div class="product-image">
+              <img
+                src="assets/product-3.png"
+                alt="Lolito sofa"
+                loading="lazy"
+              /><span class="badge sale">-50%</span>
+            </div>
+            <div class="product-info">
+              <h3>Lolito</h3>
+              <p>Luxury big sofa</p>
+              <strong>Rp 7.000.000</strong><del>Rp 14.000.000</del>
+            </div>
+            <div class="product-overlay">
+              <button class="add-cart">Add to cart</button>
+              <div>
+                <button aria-label="Share Lolito"><span>Share</span></button
+                ><button class="like" aria-label="Like Lolito">
+                  <span>Like</span>
+                </button>
+              </div>
+            </div>
+          </article>
+          <article class="product-card">
+            <div class="product-image">
+              <img
+                src="assets/product-4.png"
+                alt="Respira outdoor set"
+                loading="lazy"
+              /><span class="badge new">New</span>
+            </div>
+            <div class="product-info">
+              <h3>Respira</h3>
+              <p>Outdoor bar table and stool</p>
+              <strong>Rp 500.000</strong>
+            </div>
+            <div class="product-overlay">
+              <button class="add-cart">Add to cart</button>
+              <div>
+                <button aria-label="Share Respira"><span>Share</span></button
+                ><button class="like" aria-label="Like Respira">
+                  <span>Like</span>
+                </button>
+              </div>
+            </div>
+          </article>
+          <article class="product-card extra-product">
+            <div class="product-image">
+              <img src="assets/product-5.png" alt="Grifo lamp" loading="lazy" />
+            </div>
+            <div class="product-info">
+              <h3>Grifo</h3>
+              <p>Night lamp</p>
+              <strong>Rp 1.500.000</strong>
+            </div>
+            <div class="product-overlay">
+              <button class="add-cart">Add to cart</button>
+              <div>
+                <button aria-label="Share Grifo"><span>Share</span></button
+                ><button class="like" aria-label="Like Grifo">
+                  <span>Like</span>
+                </button>
+              </div>
+            </div>
+          </article>
+          <article class="product-card extra-product">
+            <div class="product-image">
+              <img
+                src="assets/product-6.png"
+                alt="Muggo mug"
+                loading="lazy"
+              /><span class="badge new">New</span>
+            </div>
+            <div class="product-info">
+              <h3>Muggo</h3>
+              <p>Small mug</p>
+              <strong>Rp 150.000</strong>
+            </div>
+            <div class="product-overlay">
+              <button class="add-cart">Add to cart</button>
+              <div>
+                <button aria-label="Share Muggo"><span>Share</span></button
+                ><button class="like" aria-label="Like Muggo">
+                  <span>Like</span>
+                </button>
+              </div>
+            </div>
+          </article>
+          <article class="product-card extra-product">
+            <div class="product-image">
+              <img
+                src="assets/product-7.png"
+                alt="Pingky bed set"
+                loading="lazy"
+              /><span class="badge sale">-50%</span>
+            </div>
+            <div class="product-info">
+              <h3>Pingky</h3>
+              <p>Cute bed set</p>
+              <strong>Rp 7.000.000</strong><del>Rp 14.000.000</del>
+            </div>
+            <div class="product-overlay">
+              <button class="add-cart">Add to cart</button>
+              <div>
+                <button aria-label="Share Pingky"><span>Share</span></button
+                ><button class="like" aria-label="Like Pingky">
+                  <span>Like</span>
+                </button>
+              </div>
+            </div>
+          </article>
+          <article class="product-card extra-product">
+            <div class="product-image">
+              <img
+                src="assets/product-8.png"
+                alt="Potty flower pot"
+                loading="lazy"
+              /><span class="badge new">New</span>
+            </div>
+            <div class="product-info">
+              <h3>Potty</h3>
+              <p>Minimalist flower pot</p>
+              <strong>Rp 500.000</strong>
+            </div>
+            <div class="product-overlay">
+              <button class="add-cart">Add to cart</button>
+              <div>
+                <button aria-label="Share Potty"><span>Share</span></button
+                ><button class="like" aria-label="Like Potty">
+                  <span>Like</span>
+                </button>
+              </div>
+            </div>
+          </article>
+        </div>
+        <button
+          class="outline-button show-more"
+          type="button"
+          aria-expanded="false"
+        >
+          Show More
+        </button>
+      </section>
+
+      <section class="inspiration">
+        <div class="inspiration-copy">
+          <h2>50+ Beautiful rooms<br />inspiration</h2>
+          <p>
+            Our designer already made a lot of beautiful prototypes of rooms
+            that inspire you.
+          </p>
+          <a class="primary-button small" href="#setup">Explore More</a>
+        </div>
+        <div class="room-slider">
+          <div class="room-main">
+            <img
+              src="assets/range-bedroom.png"
+              alt="Bedroom inspiration"
+              loading="lazy"
+            />
+            <div class="room-label">
+              <span>01 — Bed Room</span><strong>Inner Peace</strong>
+            </div>
+            <button aria-label="Next room">→</button>
+          </div>
+          <img
+            class="room-side"
+            src="assets/range-living.png"
+            alt="Living room inspiration"
+            loading="lazy"
+          />
+          <div class="slider-dots" aria-label="Slider position">
+            <button class="active" aria-label="Slide 1"></button
+            ><button aria-label="Slide 2"></button
+            ><button aria-label="Slide 3"></button
+            ><button aria-label="Slide 4"></button>
+          </div>
+        </div>
+      </section>
+
+      <section class="setup" id="setup">
+        <p>Share your setup with</p>
+        <h2>#FuniroFurniture</h2>
+        <img
+          src="assets/gallery.png"
+          alt="Collage of Furniro interiors"
+          loading="lazy"
+        />
+      </section>
+    </main>
+
+    <footer id="contact">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h2>Funiro.</h2>
+          <p>400 University Drive Suite 200 Coral Gables,<br />FL 33134 USA</p>
+        </div>
+        <div>
+          <h3>Links</h3>
+          <a href="index.html">Home</a><a href="shop.html">Shop</a
+          ><a href="blog.html">Blog</a><a href="about.html">About</a
+          ><a href="contact.html">Contact</a>
+        </div>
+        <div>
+          <h3>Help</h3>
+          <a href="checkout.html">Payment Options</a
+          ><a href="contact.html">Returns</a
+          ><a href="contact.html">Privacy Policies</a>
+        </div>
+        <div class="newsletter">
+          <h3>Newsletter</h3>
+          <form>
+            <label class="sr-only" for="email">Email address</label
+            ><input
+              id="email"
+              type="email"
+              placeholder="Enter Your Email Address"
+              required
+            /><button type="submit">Subscribe</button>
+          </form>
+          <p class="form-message" aria-live="polite"></p>
+        </div>
+      </div>
+      <p class="copyright">2023 furino. All rights reserved</p>
+    </footer>
+
+    <div class="search-panel" hidden>
+      <form>
+        <input
+          type="search"
+          placeholder="What are you looking for?"
+          aria-label="Search products"
+        /><button type="submit">Search</button
+        ><button class="close-search" type="button" aria-label="Close search">
+          ×
+        </button>
+      </form>
+    </div>
+    <div class="toast" role="status" aria-live="polite"></div>
+  </body>
+</html>

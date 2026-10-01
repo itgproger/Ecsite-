@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Cart — Furniro</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="pages.css" />
+    <script src="inner.js" defer></script>
+  </head>
+  <body class="inner-page">
+    <div class="page-header"></div>
+    <main>
+      <section class="page-hero">
+        <div>
+          <svg class="brand-mark" viewBox="0 0 48 36">
+            <path d="M4 30 16 5l8 17L32 5l12 25h-8l-4-9-8 14-8-14-4 9H4Z" />
+          </svg>
+          <h1>Cart</h1>
+          <div class="breadcrumbs">
+            <a href="index.html">Home</a><span>›</span><span>Cart</span>
+          </div>
+        </div>
+      </section>
+      <section class="cart-layout page-container">
+        <div class="cart-list">
+          <div class="cart-table-head">
+            <span>Product</span><span>Price</span><span>Quantity</span
+            ><span>Subtotal</span><span></span>
+          </div>
+          <div class="cart-item">
+            <div class="cart-product">
+              <img src="assets/product-3.png" alt="Asgaard sofa" /><span
+                >Asgaard sofa</span
+              >
+            </div>
+            <span>Rs. 250,000.00</span>
+            <div class="quantity"><span>1</span></div>
+            <strong>Rs. 250,000.00</strong
+            ><button class="remove-item" aria-label="Remove">Remove</button>
+          </div>
+        </div>
+        <aside class="cart-totals">
+          <h2>Cart Totals</h2>
+          <div class="total-line">
+            <strong>Subtotal</strong><span>Rs. 250,000.00</span>
+          </div>
+          <div class="total-line grand">
+            <strong>Total</strong><span>Rs. 250,000.00</span>
+          </div>
+          <a href="checkout.html">Check Out</a>
+        </aside>
+      </section>
+    </main>
+    <section class="features">
+      <div class="feature">
+        <span class="feature-icon" aria-hidden="true">01</span>
+        <div>
+          <h3>High Quality</h3>
+          <p>crafted from top materials</p>
+        </div>
+      </div>
+      <div class="feature">
+        <span class="feature-icon" aria-hidden="true">02</span>
+        <div>
+          <h3>Warranty Protection</h3>
+          <p>Over 2 years</p>
+        </div>
+      </div>
+      <div class="feature">
+        <span class="feature-icon" aria-hidden="true">03</span>
+        <div>
+          <h3>Free Shipping</h3>
+          <p>Order over 150 $</p>
+        </div>
+      </div>
+      <div class="feature">
+        <span class="feature-icon" aria-hidden="true">04</span>
+        <div>
+          <h3>24 / 7 Support</h3>
+          <p>Dedicated support</p>
+        </div>
+      </div>
+    </section>
+    <div class="page-footer"></div>
+    <script>
+      document.addEventListener("click", (e) => {
+        if (e.target.closest(".remove-item")) {
+          e.target.closest(".cart-item").remove();
+          document
+            .querySelectorAll(".total-line span")
+            .forEach((x) => (x.textContent = "Rs. 0.00"));
+          localStorage.setItem("furniro-cart", "0");
+          document.querySelector(".cart-count").textContent = "0";
+        }
+      });
+    </script>
+  </body>
+</html>

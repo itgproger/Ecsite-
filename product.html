@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Asgaard Sofa — Furniro</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="pages.css" />
+    <script src="inner.js" defer></script>
+  </head>
+  <body class="inner-page">
+    <div class="page-header"></div>
+    <main>
+      <div class="detail-breadcrumb">
+        <div class="page-container">
+          <a href="index.html">Home</a><span>›</span><a href="shop.html">Shop</a
+          ><span>›</span><strong>Asgaard sofa</strong>
+        </div>
+      </div>
+      <section class="product-detail page-container">
+        <div class="thumbs">
+          <button>
+            <img src="assets/product-3.png" alt="Sofa thumbnail" /></button
+          ><button><img src="assets/product-7.png" alt="Sofa side" /></button
+          ><button>
+            <img src="assets/range-living.png" alt="Sofa in room" /></button
+          ><button><img src="assets/product-4.png" alt="Sofa detail" /></button>
+        </div>
+        <div class="main-product-image">
+          <img src="assets/product-3.png" alt="Asgaard sofa" />
+        </div>
+        <div class="product-summary">
+          <h1>Asgaard sofa</h1>
+          <p class="detail-price">Rs. 250,000.00</p>
+          <div class="rating">
+            <strong aria-label="Rating 5 out of 5">5.0 / 5</strong>
+            <span>5 Customer Reviews</span>
+          </div>
+          <p class="detail-desc">
+            Setting the bar as one of the loudest speakers in its class, the
+            Asgaard is a compact, stout-hearted sofa with a well-balanced
+            design.
+          </p>
+          <p class="option-label">Size</p>
+          <div class="size-options">
+            <button class="active">L</button><button>XL</button
+            ><button>XS</button>
+          </div>
+          <p class="option-label">Color</p>
+          <div class="color-options">
+            <button aria-label="Purple"></button
+            ><button aria-label="Black"></button
+            ><button aria-label="Gold"></button>
+          </div>
+          <div class="purchase-row">
+            <div class="quantity">
+              <button class="qty-minus">−</button><span>1</span
+              ><button class="qty-plus">+</button>
+            </div>
+            <button class="detail-action" data-add-cart>Add To Cart</button
+            ><button
+              class="detail-action"
+              onclick="location.href='comparison.html'"
+            >
+              + Compare
+            </button>
+          </div>
+          <div class="product-meta">
+            <div><span>SKU</span>: SS001</div>
+            <div><span>Category</span>: Sofas</div>
+            <div><span>Tags</span>: Sofa, Chair, Home, Shop</div>
+            <div><span>Share</span>: Facebook, LinkedIn, Twitter</div>
+          </div>
+        </div>
+      </section>
+      <section class="detail-tabs">
+        <div class="page-container">
+          <div class="tab-buttons">
+            <button class="active">Description</button
+            ><button>Additional Information</button><button>Reviews [5]</button>
+          </div>
+          <div class="tab-copy">
+            <p>
+              Embodying the raw, wayward spirit of rock ‘n’ roll, the Asgaard
+              sofa combines clean modern proportions with generous comfort. Its
+              timeless form fits naturally into both calm and expressive
+              interiors.
+            </p>
+            <p>
+              Upholstered in a soft, durable fabric, the sofa has a solid frame
+              and carefully balanced cushions for everyday relaxation.
+            </p>
+          </div>
+          <div class="detail-gallery">
+            <img src="assets/range-living.png" alt="Asgaard sofa room" /><img
+              src="assets/range-bedroom.png"
+              alt="Asgaard sofa detail"
+            />
+          </div>
+        </div>
+      </section>
+      <section class="related page-container">
+        <h2>Related Products</h2>
+        <div class="product-grid" data-product-grid="4"></div>
+        <a
+          class="outline-button"
+          href="shop.html"
+          style="display: inline-grid; place-items: center"
+          >Show More</a
+        >
+      </section>
+    </main>
+    <div class="page-footer"></div>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        let n = 1,
+          s = document.querySelector(".quantity span");
+        document.querySelector(".qty-plus").onclick = () =>
+          (s.textContent = ++n);
+        document.querySelector(".qty-minus").onclick = () =>
+          (s.textContent = Math.max(1, --n));
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Shop — Furniro</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="pages.css" />
+    <script src="inner.js" defer></script>
+  </head>
+  <body class="inner-page">
+    <div class="page-header"></div>
+    <main>
+      <section class="page-hero">
+        <div>
+          <svg class="brand-mark" viewBox="0 0 48 36">
+            <path d="M4 30 16 5l8 17L32 5l12 25h-8l-4-9-8 14-8-14-4 9H4Z" />
+          </svg>
+          <h1>Shop</h1>
+          <div class="breadcrumbs">
+            <a href="index.html">Home</a><span>›</span><span>Shop</span>
+          </div>
+        </div>
+      </section>
+      <div class="shop-toolbar">
+        <div class="toolbar-inner">
+          <div class="filter-label">
+            <svg viewBox="0 0 24 24"><path d="M4 6h16M7 12h10M10 18h4" /></svg
+            >Filter
+          </div>
+          <div class="view-toggle">
+            <button aria-label="Grid view">
+              <svg viewBox="0 0 24 24">
+                <path d="M4 4h6v6H4zM14 4h6v6h-6zM4 14h6v6H4zM14 14h6v6h-6z" />
+              </svg></button
+            ><button aria-label="List view">
+              <svg viewBox="0 0 24 24">
+                <path d="M5 6h14M5 12h14M5 18h14" />
+              </svg>
+            </button>
+          </div>
+          <span class="results-count">Showing 1–16 of 32 results</span
+          ><label class="toolbar-control"
+            >Show<select class="show-select">
+              <option>16</option>
+              <option>8</option>
+            </select></label
+          ><label class="toolbar-control"
+            >Sort by<select>
+              <option>Default</option>
+              <option>Price: low to high</option>
+              <option>Newest</option>
+            </select></label
+          >
+        </div>
+      </div>
+      <section class="shop-products page-container">
+        <div class="product-grid" data-product-grid="8"></div>
+        <div class="pagination">
+          <button class="active">1</button><button>2</button><button>3</button
+          ><button>Next</button>
+        </div>
+      </section>
+    </main>
+    <section class="features">
+      <div class="feature">
+        <span class="feature-icon" aria-hidden="true">01</span>
+        <div>
+          <h3>High Quality</h3>
+          <p>crafted from top materials</p>
+        </div>
+      </div>
+      <div class="feature">
+        <span class="feature-icon" aria-hidden="true">02</span>
+        <div>
+          <h3>Warranty Protection</h3>
+          <p>Over 2 years</p>
+        </div>
+      </div>
+      <div class="feature">
+        <span class="feature-icon" aria-hidden="true">03</span>
+        <div>
+          <h3>Free Shipping</h3>
+          <p>Order over 150 $</p>
+        </div>
+      </div>
+      <div class="feature">
+        <span class="feature-icon" aria-hidden="true">04</span>
+        <div>
+          <h3>24 / 7 Support</h3>
+          <p>Dedicated support</p>
+        </div>
+      </div>
+    </section>
+    <div class="page-footer"></div>
+  </body>
+</html>
